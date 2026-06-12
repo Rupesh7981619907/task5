@@ -1,0 +1,79 @@
+/* Basic layout and typography */
+html,body{height:100%;margin:0;font-family:Segoe UI, Roboto, Arial, sans-serif;background-color:#f0f4ff;background:linear-gradient(180deg,#f0f4ff 0%,#fff 100%);color:#222}
+body{display:flex;flex-direction:column;min-height:100vh}
+header{background:linear-gradient(90deg,#6a11cb 0%,#2575fc 100%);color:#fff;padding:1rem 1rem;box-shadow:0 6px 18px rgba(37,117,252,.12)}
+header nav{max-width:1000px;margin:0 auto;display:flex;gap:1rem;align-items:center;justify-content:center}
+header a{color:#fff;text-decoration:none;font-weight:700;padding:.25rem .5rem;border-radius:6px}
+header a:hover{background:rgba(255,255,255,.08)}
+main{max-width:1000px;margin:1.5rem auto;padding:1rem;flex:1;display:flex;flex-direction:column;align-items:center}
+footer{background:linear-gradient(180deg,#fff,#f8fafc);border-top:1px solid rgba(0,0,0,.04);padding:1rem;text-align:center;font-size:.95rem}
+
+/* Center content cards */
+.card{width:100%;max-width:880px;background:linear-gradient(180deg,#ffffff,#fbfdff);border:1px solid rgba(14,30,60,.06);padding:1.25rem;margin-bottom:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(20,40,80,.04)}
+
+/* Home page specific */
+.hero{max-width:920px;padding:2rem 1.25rem}
+.posts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;width:100%;}
+.featured-card{background:linear-gradient(90deg,#fff7f3,#fff);border:1px solid rgba(255,122,24,.06)}
+.post-card h3{margin:.25rem 0;color:#19307a}
+.post-card .post-body{max-height:6.5rem;overflow:hidden;transition:all .28s ease}
+.card.expanded .post-body{max-height:200vh}
+.featured-card .post-body{max-height:14rem}
+
+.btn-outline{background:transparent;color:#1b2b8f;border:2px solid rgba(27,43,143,.12);padding:.5rem .75rem}
+
+/* Admin dashboard styles */
+.admin-header{display:flex;flex-direction:column;gap:.5rem}
+.stats-row{display:flex;gap:1rem;flex-wrap:wrap;margin-top:8px}
+.stat-card{background:linear-gradient(180deg,#ffffff,#f7fbff);padding:.75rem;border-radius:8px;min-width:140px;flex:1;border:1px solid rgba(20,40,80,.04);text-align:center}
+.stat-card .num{font-size:1.5rem;font-weight:800;color:#19307a}
+.admin-controls{display:flex;gap:8px;align-items:center}
+.admin-search{margin-left:auto}
+.admin-table th.actions, .admin-table td.actions{text-align:right;width:200px}
+.table-actions{display:flex;gap:8px;align-items:center;justify-content:flex-end}
+.table-actions form{margin:0}
+
+
+
+/* Articles / posts */
+article.card{background:linear-gradient(180deg,#fffdfa,#fff);}
+article h2{margin:.25rem 0 .5rem;color:#2b2db3}
+article p{margin:.5rem 0;color:#333;line-height:1.6}
+
+/* Forms */
+form{background:transparent;width:100%}
+label{display:block;margin:.5rem 0;font-weight:600}
+input[type=text],input[type=password],textarea,input[type=search]{width:100%;padding:.6rem;border:1px solid rgba(20,30,60,.08);border-radius:8px;box-sizing:border-box;background:#fff}
+/* Button system */
+.btn, button.btn, a.btn{display:inline-block;padding:.6rem .9rem;border-radius:8px;font-weight:700;color:#fff;text-decoration:none;border:none;cursor:pointer}
+.btn-primary{background:linear-gradient(90deg,#ff7a18 0%,#af002d 100%)}
+.btn-secondary{background:linear-gradient(90deg,#00c6ff 0%,#0072ff 100%)}
+.btn-success{background:linear-gradient(90deg,#28c76f 0%,#20a34a 100%)}
+.btn-danger{background:linear-gradient(90deg,#ff416c 0%,#ff4b2b 100%)}
+.btn-outline{background:transparent;color:#1b2b8f;border:2px solid rgba(27,43,143,.12)}
+.btn:hover{filter:brightness(.95)}
+
+/* Tables for admin */
+table{width:100%;border-collapse:collapse;background:transparent;border-radius:8px;overflow:hidden}
+th,td{padding:.6rem .75rem;border-bottom:1px solid rgba(20,30,60,.04);text-align:left}
+th{background:linear-gradient(90deg,#f3f6ff,#ffffff);font-weight:700;color:#1b2b8f}
+tr:hover td{background:linear-gradient(90deg,rgba(11,92,255,.03),rgba(11,92,255,.01))}
+
+/* Utilities */
+.muted{color:#666;font-size:.95rem}
+.text-right{text-align:right}
+
+/* Center inner content to look balanced */
+.centered {display:flex;flex-direction:column;align-items:center;text-align:center}
+.container-wide{width:100%;max-width:880px}
+
+/* Responsive */
+@media (max-width:780px){
+  header nav{flex-wrap:wrap}
+  th,td{font-size:.95rem;padding:.5rem}
+  article p{font-size:.97rem}
+  .card{padding:.8rem;border-radius:8px}
+}
+
+/* Accessibility focus */
+a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(37,117,252,.18);outline-offset:2px}
